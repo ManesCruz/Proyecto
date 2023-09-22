@@ -8,9 +8,56 @@ namespace Proyecto
 {
     internal class Diet
     {
-        public double CaloriesNumber { get; set; }
-        public string SuggestedFood { get; set; }
-        public string Restriction { get; set; }
-        public string Supplements { get; set; }
+        private double _caloriesNumber; 
+        public double CaloriesNumber 
+        { 
+            get
+            {
+              return _caloriesNumber;  
+            } 
+            set
+            {
+               _caloriesNumber= value; 
+            }
+        }
+
+        private string _suggestedFood;
+        public string SuggestedFood 
+        { 
+            get
+            {
+                return _suggestedFood;
+            }
+            set
+            {
+                _suggestedFood = value;
+            } 
+        }
+
+        private string _restriction;
+        public string Restriction 
+        { 
+            get
+            {
+                return _restriction;
+            } 
+            set
+            {
+                 _restriction = value;    
+            } 
+        }
+
+        private string _supplements;
+        public string Supplements
+        { 
+            get
+            {
+               return _supplements;    
+            } 
+            set
+            {
+                _supplements = value;
+            }
+        }
     }
 }
