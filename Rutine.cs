@@ -8,11 +8,82 @@ namespace Proyecto
 {
     internal class Rutine
     { 
-        public string Type { get; set; }
-        public string Intensity { get; set; }
-        public int Time { get; set; }
-        public int Rest { get; set; }
-        public string Days { get; set; }
-        public Exercise Exercise { get; set; }
+        private string _type;
+        public string Type 
+        { 
+            get
+            {
+               return _type;
+            } 
+            set
+            {
+               _type = value;
+            } 
+        }
+        
+        private string _intensity;
+        public string Intensity
+        {
+            get
+            {
+               return _intensity;
+            } 
+            set
+            {
+               _intensity = value;
+            } 
+        }
+        
+        private int _time;
+        public int Time 
+        {
+            get
+            {
+               return _time;   
+            } 
+            set
+            {
+               _time = value;
+            } 
+        }
+
+        private int _rest;
+        public int Rest 
+        { 
+            get
+            {
+               return _rest;   
+            } 
+            set
+            {
+               _rest = value; 
+            } 
+        }
+
+        private string _days;
+        public string Days 
+        {
+            get
+            {
+              return _days;    
+            } 
+            set
+            {
+              _days = value; 
+            }
+        }
+
+        private Exercise _exercise;
+        public Exercise Exercise 
+        { 
+            get
+            {
+               return _exercise; 
+            }
+            set
+            {
+               _exercise = value;   
+            } 
+        }
     }
 }
