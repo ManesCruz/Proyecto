@@ -9,81 +9,92 @@ namespace Proyecto
     internal class Exercise
     {
         private string _exerciseName;
-        public string ExerciseName 
-        { 
+        public string ExerciseName
+        {
             get
             {
-              return _exerciseName;  
+                return _exerciseName;
             }
             set
             {
                 _exerciseName = value;
-            } 
+            }
         }
-        
+
         private int _series;
-        public int Series  
-        { 
+        public int Series
+        {
             get
             {
-              return _series;
+                return _series;
             }
             set
             {
-              _series = value;   
-            } 
+                _series = value;
+            }
         }
 
         private int _repetitions;
-        public int Repetitions 
-        { 
+        public int Repetitions
+        {
             get
             {
-              return _repetitions;        
+                return _repetitions;
             }
             set
             {
-               _repetitions = value;
-            } 
+                _repetitions = value;
+            }
         }
 
         private string _movement;
-        public string Movement  
-        { 
+        public string Movement
+        {
             get
             {
-               return _movement; 
+                return _movement;
             }
             set
             {
                 _movement = value;
-            } 
+            }
         }
 
         private double _rm;
-        public double RM 
-        { 
+        public double RM
+        {
             get
             {
-              return _rm;  
+                return _rm;
             }
             set
             {
-               _rm = value;
-            } 
+                _rm = value;
+            }
         }
 
         private string _implements;
-        public string Implements  
-        { 
+        public string Implements
+        {
             get
             {
-              return _implements;  
+                return _implements;
             }
             set
             {
-               _implements = value;
-            } 
+                _implements = value;
+            }
+        }
+
+        public Exercise(string exerciseName, int series,int repetitions, string movement, double rm,string implements)
+        {
+            _exerciseName = exerciseName;
+            _series = series;
+            _repetitions = repetitions;
+            _movement = movement;
+            _rm = rm;
+            _implements = implements;
+
         }
     }
 }

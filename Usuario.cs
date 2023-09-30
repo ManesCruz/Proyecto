@@ -21,7 +21,7 @@ namespace Proyecto
             } 
         }
         
-        private int age;
+        private int _age;
         public int Age 
         {
             get
@@ -111,6 +111,8 @@ namespace Proyecto
                 _unitType = value;
             } 
         }
+
+
     }
 }
 

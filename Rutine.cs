@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Proyecto
 {
     internal class Rutine
-    { 
+    {
         private string _type;
-        public string Type 
-        { 
+        public string Type
+        {
             get
             {
-               return _type;
-            } 
+                return _type;
+            }
             set
             {
-               _type = value;
-            } 
+                _type = value;
+            }
         }
         
         private string _intensity;
@@ -72,18 +72,29 @@ namespace Proyecto
               _days = value; 
             }
         }
-
-        private Exercise _exercise;
-        public Exercise Exercise 
-        { 
+        private Exercise[] _exercises;
+        public Exercise[] Exercise
+        {
             get
             {
-               return _exercise; 
+                return _exercises;
             }
             set
             {
-               _exercise = value;   
-            } 
+                _exercises = value;
+            }
         }
+
+        public Rutine(string type,string intensity,int time, int rest, string days, Exercise[] exercises)
+        {
+            
+            _type = type;
+            _intensity = intensity;
+            _time = time;
+            _rest = rest;
+            _days = days;
+            _exercises = exercises;
+        }
+
     }
 }
