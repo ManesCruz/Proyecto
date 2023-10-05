@@ -86,8 +86,7 @@ namespace Proyecto
         }
 
         public Rutine(string type,string intensity,int time, int rest, string days, Exercise[] exercises)
-        {
-            
+        { 
             _type = type;
             _intensity = intensity;
             _time = time;
