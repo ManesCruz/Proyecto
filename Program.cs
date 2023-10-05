@@ -16,8 +16,6 @@
             Console.WriteLine(rutine.Exercise);
 
 
-
-
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,6 +111,33 @@ namespace Proyecto
             {
                 _unitType = value;
             } 
+        }
+
+        private Rutine[] _rutine;
+        public Rutine[] Rutine
+        {
+            get
+            {
+                return _rutine;
+            }
+            set
+            {
+                _rutine = value;
+            }
+        }
+
+        public Usuario(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType, Rutine[] rutine)
+        {
+            _name = name;
+            _age = age;
+            _weight = weight;
+            _height = height;
+            _physicalLevel = physicalLevel;
+            _objetive = objetive;
+            _genre = genre;
+            _unitType = unitType;
+            _rutine = rutine;
+            
         }
 
 
