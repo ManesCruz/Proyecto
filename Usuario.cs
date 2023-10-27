@@ -7,38 +7,39 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    public class UsuarioPremium
+    public class UsuarioPremium : UsuaryEntity
     {
-        private string _name;
-        private int _age;
-        private double _weight;
-        private double _height;
-        private string _physicalLevel;
-        private string _objetive;
-        private string _genre;
-        private string _unitType;
+        private double _caloriesCounter;
+        private string _paymentMethod;
+        private string _gift;
+        private string _personalTrainer;
 
-        public string Name { get => _name; set => _name = value; } 
-        public int Age { get => _age; set=> _age = value; }   
-        public double Weight { get => _weight; set => _weight = value; } 
-        public double Height { get => _height;set =>_height = value; } 
-        public string PhysicalLevel { get => _physicalLevel; set => _physicalLevel = value; } 
-        public string Objective { get => _objetive; set => _objetive = value; } 
-        public string Genre { get => _genre; set => _genre = value; }
-        public string UnitType { get => _unitType; set => _unitType = value; }
+        public double CaloriesCounter { get => _caloriesCounter; set => _caloriesCounter = value; }
+        public string PaymentMethod { get => _paymentMethod; set => _paymentMethod = value; }
+        public string Gift { get => _gift; set => _gift = value; }
+        public string PersonalTrainer { get => _personalTrainer; set => _personalTrainer = value; }
 
-        public UsuarioPremium(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType )
-        {
-            _name = name;
-            _age = age;
-            _weight = weight;
-            _height = height;
-            _physicalLevel = physicalLevel;
-            _objetive = objetive;
-            _genre = genre;
-            _unitType = unitType;
-            
+        public UsuarioPremium(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType):
+            base( name, age, weight, height, physicalLevel, objetive, genre, unitType)
+        {     
         }
+
+        public void SetCaloriesCounter(double caloriesCounter) {
+            _caloriesCounter = caloriesCounter;
+        }
+        public void SetPaymentMethod(string paymentMethod)
+        {
+            _paymentMethod = paymentMethod;
+        }
+        public void SetGift(string gift)
+        {
+            _gift = gift;
+        }
+        public void SetPersonalTrainer(string personalTrainer)
+        {
+            _personalTrainer = personalTrainer;
+        }
+
     }
 }
 
