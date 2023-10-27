@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    public class Usuario
+    public class UsuarioPremium
     {
         private string _name;
         private int _age;
@@ -27,7 +27,7 @@ namespace Proyecto
         public string Genre { get => _genre; set => _genre = value; }
         public string UnitType { get => _unitType; set => _unitType = value; }
 
-        public Usuario(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType )
+        public UsuarioPremium(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType )
         {
             _name = name;
             _age = age;

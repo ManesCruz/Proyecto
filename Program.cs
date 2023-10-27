@@ -1,6 +1,6 @@
 ﻿namespace Proyecto
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -12,9 +12,7 @@
 
             Exercise[] ejercicios = new Exercise[] { flexionesrusas, sentadillas };
 
-            Rutine rutine = new Rutine("empuje", "alta", 1, 1, "Lunes,miercoles y viernes", ejercicios);
-            Console.WriteLine(rutine.Exercise);
-
+            Rutine rutine = new Rutine("empuje", "alta", 1, 1, "Lunes,miercoles y viernes");
 
         }
     }
