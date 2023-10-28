@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto
 {
-    public class UsuarioPremium : UsuaryEntity
+    public class UserPremium : UserEntity
     {
         private double _caloriesCounter;
         private string _paymentMethod;
@@ -19,9 +19,10 @@ namespace Proyecto
         public string Gift { get => _gift; set => _gift = value; }
         public string PersonalTrainer { get => _personalTrainer; set => _personalTrainer = value; }
 
-        public UsuarioPremium(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType):
+        public UserPremium(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType):
             base( name, age, weight, height, physicalLevel, objetive, genre, unitType)
-        {     
+        {   
+            
         }
 
         public void SetCaloriesCounter(double caloriesCounter) {
