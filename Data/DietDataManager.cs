@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Proyecto.Data
 {
     public class DietDataManager
+
     {
         public static void SaveCaloriesNUmber(Diet PersonalDiet)
         {
