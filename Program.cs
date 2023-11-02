@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using Proyecto.Data;
+using System.Security;
 
 namespace Proyecto
 {
@@ -7,17 +8,25 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
-            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra",17,1.85,65,"elevate","crecer","masculine","Kilos");
+            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
             Console.WriteLine(PersonalInformation.Name);
-            Exercise flexionesrusas = new Exercise("flexiones rusas", 3, 12, "subir y bajar", 0, "colchoneta");
-            Console.WriteLine(flexionesrusas.ExerciseName);
+
+            RegularUser Weight = new RegularUser("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
+            Console.WriteLine(Weight.Weight);
+
+            Rutine PersonalRutine = new Rutine("aerobico", "alta", "1 hora", "3 minutos entre series", "5 dias a la semana");
+            Console.WriteLine(PersonalRutine.Time);
+
+            Diet PersonalDiet = new Diet(1200, "Batidos de abano y avena, 3 huevos y arroz","el dulce","creatina y proteina en polvo");
+            Console.WriteLine(PersonalDiet.CaloriesNumber);
+
+            Exercise FlexionesRusas = new Exercise("flexiones rusas", 3, 12, "subir y bajar", 0, "colchoneta");
+            Console.WriteLine(FlexionesRusas.ExerciseName);
+
             Exercise sentadillas = new Exercise("sentadillas", 3, 12, "subir y bajar", 0, "colchoneta");
             Console.WriteLine(sentadillas.ExerciseName);
 
-            Exercise[] ejercicios = new Exercise[] { flexionesrusas, sentadillas };
-
-            Rutine rutine = new Rutine("empuje", "alta", 1, 1, "Lunes,miercoles y viernes");
-
+            Exercise[] ejercicios = new Exercise[] { FlexionesRusas, sentadillas };
 
             UserPremiumDataManager.SaveName(PersonalInformation);
 

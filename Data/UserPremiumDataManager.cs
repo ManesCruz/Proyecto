@@ -21,17 +21,22 @@ namespace Proyecto.Data
             Console.ForegroundColor = ConsoleColor.Green;
         }
 
-        public static List<UserPremium> getALL()
+        public static List<UserPremium> GetALL()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Green;
             return new List<UserPremium>();
         }
-        public static UserPremium GetName(string name) 
+        public static UserPremium GetName(string name)
         {
-   
+            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
+            return PersonalInformation;
         }
-
+        public static bool DeleteName(string name)
+        {
+            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
+            return true;
+        }
 
     }
 }

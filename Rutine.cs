@@ -10,18 +10,18 @@ namespace Proyecto
     {
         private string _type;
         private string _intensity;
-        private int _time;
-        private int _rest;
+        private string _time;
+        private string _rest;
         private string _days;
 
         public string Type { get => _type; set => _type = value; }
         public string Intensity { get => _intensity; set => _intensity = value; } 
-        public int Time { get => _time; set => _time = value; } 
-        public int Rest { get => _rest; set => _rest = value; } 
+        public string Time { get => _time; set => _time = value; } 
+        public string Rest { get => _rest; set => _rest = value; } 
         public string Days { get => _days; set => _days = value; }
     
 
-        public Rutine(string type,string intensity,int time, int rest, string days)
+        public Rutine(string type,string intensity,string time, string rest, string days)
         { 
             _type = type;
             _intensity = intensity;
