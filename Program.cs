@@ -8,10 +8,14 @@ namespace Proyecto
     {
         static void Main(string[] args)
         {
-            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
-            Console.WriteLine(PersonalInformation.Name);
+            Console.WriteLine("Hello,World");
+            UserPremium userPremium = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
+            UserPremiumDataManager.AddUserPremium(userPremium);
+        
 
-            RegularUser Weight = new RegularUser("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
+
+
+            /*RegularUser Weight = new RegularUser("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
             Console.WriteLine(Weight.Weight);
 
             Rutine PersonalRutine = new Rutine("aerobico", "alta", "1 hora", "3 minutos entre series", "5 dias a la semana");
@@ -28,8 +32,8 @@ namespace Proyecto
 
             Exercise[] ejercicios = new Exercise[] { FlexionesRusas, sentadillas };
 
-            UserPremiumDataManager.SaveName(PersonalInformation);
 
+*/
         }
     }
 }

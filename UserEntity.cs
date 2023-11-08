@@ -16,6 +16,7 @@ namespace Proyecto
         private string _objetive;
         private string _genre;
         private string _unitType;
+        private string _id;
 
         public string Name { get => _name; set => _name = value; }
         public int Age { get => _age; set => _age = value; }
@@ -25,7 +26,8 @@ namespace Proyecto
         public string Objective { get => _objetive; set => _objetive = value; }
         public string Genre { get => _genre; set => _genre = value; }
         public string UnitType { get => _unitType; set => _unitType = value; }
-   
+        public string Id { get => _id; set => _id = value; }
+
         public UserEntity(string name, int age, double weight, double height, string physicalLevel, string objetive, string genre, string unitType)
         {
                 _name = name;
@@ -36,7 +38,6 @@ namespace Proyecto
                 _objetive = objetive;
                 _genre = genre;
                 _unitType = unitType;
-
         }
     }
 }

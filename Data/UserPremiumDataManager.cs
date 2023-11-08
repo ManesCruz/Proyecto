@@ -3,40 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Proyecto.Data
 {
     public static class UserPremiumDataManager
     {
-        public static void SaveName(UserPremium PersonalInformation) 
+        private const string DATA_FILE = "C:\\Users\\Laura\\Source\\Repos\\ManesCruz\\Proyecto\\Data\\UserPremium.json";
+        public static UserPremium AddUserPremium(UserPremium userPremium)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(PersonalInformation.Name);
-            Console.ForegroundColor = ConsoleColor.Green;
-        }
-        public static void UpdateName(UserPremium PersonalInformation)
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(PersonalInformation.Name);
-            Console.ForegroundColor = ConsoleColor.Green;
-        }
+            try
+            {
+                string currentUserPremiumState = GetFileInfo();
+                var jObject = JObject.Parse(currentUserPremiumState);
+                userPremium.Id = $"{jObject.Properties().Count() + 1}";
+                string userPremiumJson = JsonConvert.SerializeObject(userPremium);
+                jObject.Add(userPremium.Id,userPremiumJson);
 
-        public static List<UserPremium> GetALL()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Green;
-            return new List<UserPremium>();
+                string outputJson = JsonConvert.SerializeObject(jObject, Formatting.Indented);
+                WriteFileInfo(outputJson);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return userPremium;     
         }
-        public static UserPremium GetName(string name)
+        private static string GetFileInfo() 
         {
-            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
-            return PersonalInformation;
+        return File.ReadAllText(DATA_FILE);
         }
-        public static bool DeleteName(string name)
-        {
-            UserPremium PersonalInformation = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
-            return true;
+        private static void WriteFileInfo(string json) 
+        { 
+            File.WriteAllText(DATA_FILE,json);
         }
-
     }
 }
