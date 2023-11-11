@@ -11,7 +11,14 @@ namespace Proyecto
             Console.WriteLine("Hello,World");
             UserPremium userPremium = new UserPremium("Manuel Esteban Cruz Parra", 17, 1.85, 65, "elevate", "crecer", "masculine", "Kilos");
             UserPremiumDataManager.AddUserPremium(userPremium);
+
+            var userPremiumUpd = UserPremiumDataManager.UpdateUserPremium(userPremium);
+            userPremiumUpd.Name += " Update";
+            UserPremiumDataManager.UpdateUserPremium(userPremiumUpd);
+
+            UserPremiumDataManager.DeleteUserPremium("3");
         
+        var getUserPremium = UserPremiumDataManager.GetUserPremiumByID("2");
 
 
 
