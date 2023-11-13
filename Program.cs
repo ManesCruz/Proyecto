@@ -18,7 +18,7 @@ namespace Proyecto
 
             UserPremiumDataManager.DeleteUserPremium("3");
         
-        var getUserPremium = UserPremiumDataManager.GetUserPremiumByID("2");
+             var getUserPremium = UserPremiumDataManager.GetUserPremiumByID("1");
 
 
 

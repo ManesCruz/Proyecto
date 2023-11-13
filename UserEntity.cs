@@ -9,7 +9,7 @@ namespace Proyecto
     public class UserEntity
     {
         private string _name;
-        private int _age;
+        private int     _age;
         private double _weight;
         private double _height;
         private string _physicalLevel;
@@ -23,7 +23,7 @@ namespace Proyecto
         public double Weight { get => _weight; set => _weight = value; }
         public double Height { get => _height; set => _height = value; }
         public string PhysicalLevel { get => _physicalLevel; set => _physicalLevel = value; }
-        public string Objective { get => _objetive; set => _objetive = value; }
+        public string Objetive { get => _objetive; set => _objetive = value; }
         public string Genre { get => _genre; set => _genre = value; }
         public string UnitType { get => _unitType; set => _unitType = value; }
         public string Id { get => _id; set => _id = value; }

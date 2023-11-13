@@ -11,7 +11,7 @@ namespace Proyecto.Data
 {
     public static class UserPremiumDataManager
     {
-        private const string DATA_FILE = "C:\\Users\\USUARIO\\Source\\Repos\\ManesCruz\\Proyecto\\Data\\UserPremium.json";
+        private const string DATA_FILE = "C:\\Users\\Laura\\source\\repos\\ManesCruz\\Proyecto\\Data\\UserPremium.json";
         public static UserPremium AddUserPremium(UserPremium userPremium)
         {
             try
@@ -86,8 +86,9 @@ namespace Proyecto.Data
                 string currentUserPremiumState = GetFileInfo();
                 var jObject = JObject.Parse(currentUserPremiumState);
                 var userPremiumJsonValue = (string)jObject[id];
+                var jObjectValue = JObject.Parse(currentUserPremiumState);
 
-                return new UserPremium(userPremiumJsonValue); 
+                return new UserPremium(jObjectValue); 
             }
             catch (Exception ex)
             {
